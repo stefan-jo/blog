@@ -3,14 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "My AI Blog"
+  title: "Stefan's AI Blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/stefan-jo
+      - icon: linkedin
+        href: https://www.linkedin.com/in/stefan-josef-7a5a6b120
 format:
   html:
     theme:

@@ -2,7 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html"
+      "/posts/welcome/index.html",
+      "/posts/2020-11-22-emnlp/index.html",
+      "/posts/2020-10-12-nlp_summit/index.html"
     ]
   }
 ]

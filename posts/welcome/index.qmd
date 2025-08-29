@@ -1,10 +1,22 @@
 ---
 title: "Welcome To My Blog"
 author: "Stefan Josef"
-date: "2025-08-26"
+date: "2025-08-29"
 categories: [news]
 ---
 
-This is the first interesting post in a Quarto blog. Welcome!
+Welcome to my blog! Check this short post about what you can expect to read here. *Hint: it's all about retrieval.*
+
+I will finally kick off this blog and plan to post about these topics in the following weeks and months:
+
+ * how are retrieval models trained?
+ * how do late interaction models work?
+ * what are the latest trends in retrieval?
+
+These posts will include paper reviews, tutorials and research. 
+
+Looking back at the two old posts below from 2020, when I was still relatively new in the field, I can say that *a lot* as changed since then. We have a lot to cover, so let's not waste any time and get right to it. 
+
+Thanks for reading. I hope you enjoy it!
 
 ![](thumbnail.jpg)

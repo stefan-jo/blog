@@ -10,5 +10,11 @@
   },
   "about.qmd": {
     "about.html": "f3c4a14f"
+  },
+  "posts/2020-10-12-nlp_summit/index.qmd": {
+    "index.html": "b28985ad"
+  },
+  "posts/2020-11-22-emnlp/index.qmd": {
+    "index.html": "dd6ee90f"
   }
 }

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Stefan Josef">
-<meta name="dcterms.date" content="2025-08-29">
+<meta name="dcterms.date" content="2020-10-12">
 
-<title>Welcome To My Blog – Stefan’s AI Blog</title>
+<title>NLP Summit 2020 – Stefan’s AI Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,9 +119,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
+      <h1 class="title">NLP Summit 2020</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">nlp</div>
+                <div class="quarto-category">conferences</div>
               </div>
                   </div>
   </div>
@@ -139,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 29, 2025</p>
+        <p class="date">October 12, 2020</p>
       </div>
     </div>
     
@@ -158,19 +159,40 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Welcome to my blog! Check this short post about what you can expect to read here. <em>Hint: it’s all about retrieval.</em></p>
-<p>I will finally kick off this blog and plan to post about these topics in the following weeks and months:</p>
-<ul>
-<li>how are retrieval models trained?</li>
-<li>how do late interaction models work?</li>
-<li>what are the latest trends in retrieval?</li>
-</ul>
-<p>These posts will include paper reviews, tutorials and research.</p>
-<p>Looking back at the two old posts below from 2020, when I was still relatively new in the field, I can say that <em>a lot</em> as changed since then. We have a lot to cover, so let’s not waste any time and get right to it.</p>
-<p>Thanks for reading. I hope you enjoy it!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
+<section id="nlp-summit-2020" class="level1">
+<h1>NLP Summit 2020</h1>
+<p>I want to kick off this blog by describing my impressions and take-aways from attending the <a href="https://www.nlpsummit.org/">NLP Summit 2020: Applied Natural Language Processing</a> which took place virtually between October 6th and 9th. <a href="https://www.johnsnowlabs.com/">John Snow Labs</a>, the main creator behind <a href="https://github.com/JohnSnowLabs/spark-nlp">Spark NLP</a> and organizer of the summit put together a diverse and interesting program for the four conference days.</p>
+<p>Overall I really enjoyed the conference. I especially liked the focus on <em>applied</em> NLP, presenting many specific NLP use cases from industry as well as topics such as product management, model deployment and data annotation. Working myself at the intersection of applied NLP research, data science and engineering, I recognized many common pain points and lessons learned from my own experience during the conference. Please note that this blog post only describes my own experience and doesn’t give a full picture of the conference. Even though I tried to attend as many sessions as possible, I am sure that I still missed some great talks.</p>
+<section id="the-state-of-applied-nlp-in-2020" class="level2">
+<h2 class="anchored" data-anchor-id="the-state-of-applied-nlp-in-2020">The state of Applied NLP in 2020</h2>
+<p>The field of applied NLP has made tremendous progress over the last couple of years and continues to grow. Not only are academic benchmarks being beaten at a regular rate, but companies are also increasingly applying these new technologies to their use cases. The field is still very young, with only a minority of companies having NLP models in production for more than five years. However, companies are investing. According to the <a href="https://gradientflow.com/2020nlpsurvey/">2020 NLP Survey Report</a> by Ben Lorica and Paco Nathan, “53% of respondents who are Technical Leaders stated their NLP budget was at least 10% higher compared to 2019”.</p>
+<p>When it comes to specific use cases, document classification, named entity recognition and sentiment analysis are still the most popular NLP tasks. Given the sheer amount of text documents that companies are processing on a daily basis and the recent rate of improvement of NLP techniques, I believe that we will see an enourmous demand for NLP tools, platforms, engineers and researchers in the coming years. Clément Delangue, CEO at <a href="https://huggingface.co/">huggingface</a>, even went so far as giving a keynote titled “NLP is going to be the most transformational tech of the decade!”, basing this claim on the fact that most of our day, both at work and in private, is spent using natural language, which finally can be accurately processed by machines thanks to recent improvements.</p>
+<p>Just to mention a few of the many exciting use cases that were presented at the conference: - automated de-identification of medial records to enable the processing of sensitive documents such as in healthcare - above-human-level-performance document classification and <em>abstractive</em> (!) summarization of documents in the legal domain - using ML-powered intent recognition, curated templates and knowledge graphs to build effective chatbots</p>
+<p><strong>Which tools are used in industry?</strong></p>
+<p>Even though from following the Deep Learning community on twitter one might have the impression that everyone uses the huggingface transformers library (disclaimer: I’m a big fan myself) the reality paints a somewhat different picture. According to the above-mentioned survey, the three most-used NLP libraries are <a href="https://github.com/JohnSnowLabs/spark-nlp">Spark NLP</a>, <a href="https://spacy.io/">spaCy</a> and <a href="https://allennlp.org/">Allen NLP</a>, with huggingface landing on rank 7 (which is still very impressive for such a young library). Which tool is the right fit for a given project strongly depends on the specific requirements. Spark NLP and spaCy provide easy-to-use, reliable and efficient libraries for a variety of practical NLP use cases. Allen NLP might be a better suited for researchers. For state-of-the-art pre-trained transformer models one very likely would choose <a href="https://huggingface.co/transformers/">huggingface transformers</a>. For topic modelling <a href="https://radimrehurek.com/gensim/">gensim</a> is still very popular. For part-of-speech-tagging or dependency parsing <a href="https://stanfordnlp.github.io/CoreNLP/">Stanford CoreNLP</a> might be the best choice. A newcomer is the Berlin-based starup <a href="https://rasa.com/">Rasa</a> that provides an open source framework and a tool called Rasa X for developing contextual AI assistants.</p>
+<p>Even though a majority of companies use at least one of the leading NLP cloud services, there are still many challenges to be considered. Among them are price, missing customizability and features, low accuracy, unwillingness to share data and missing support of certain languages.</p>
+<p>Please download and have a look at the <a href="https://gradientflow.com/2020nlpsurvey/">2020 NLP Survey Report</a> for more details.</p>
+</section>
+<section id="on-the-importance-of-data-annotation" class="level2">
+<h2 class="anchored" data-anchor-id="on-the-importance-of-data-annotation">On the importance of data annotation</h2>
+<p>Data annotation or labelling is often considered an uncool, unqualified and strenuous task that <em>has to be</em> completed before finally being able to train a fancy model. However, in reality it is one of the most crucial tasks of completing a successful machine learning project that deserves more attention. Without clear guidelines and best practices, data annotation can become very expensive and even lead to the failure of machine learning projects due to insufficient data quality. It was great to see the topic being discussed repeatedly during several session at the NLP Summit 2020. Rebecca Leung and Marianne Mak from John Snow Labs even gave an entire talk about “Lessons learned annotating training data for healthcare NLP projects”. Here are some of their insights as well as ideas from other talks and my own experience.</p>
+<p><strong>Data annotation should be done by experts!</strong> While it may be relatively easy to draw a bounding box around a street sign, most NLP annotation tasks require serious skills. If you want to have a good dataset, annotation needs to be done by qualified domain-experts. For sensitive areas such as healthcare or legal, this might even require having a PhD in the respective field. Moreover, annotation requires incredible focus, speed and endurance. Great annotators should be appreciated and well compensated.</p>
+<p><strong>Go for quality, not quantity!</strong> Even if you have experts annotating your data, they can still make some mistakes. Some label types (e.g.&nbsp;sentiment) are very subjective and depend on the opinion of a given annotator. Training a machine learning model on smaller, high-quality datasets can lead to better results than training on larger, but noisy and inconsistent data. If the annotation task is subjective or ambiguous, it may help to let two (or more) annotators label the same examples and go by consensus or majority voting.</p>
+<p><strong>Define and review clear annotation guidelines!</strong> It is essential to clearly define guidelines for each annotation project. Formulating guidelines helps current annotators structure their thoughts and future annotators during onboarding. However, these guidelines are not set in stone but can evolve over time. It is important to hold regular (e.g.&nbsp;weekly) review sessions with team members, data scientists and clients to make sure everybody is and stays aligned.</p>
+<p><strong>Use annotation tools!!!</strong> If there is only one lesson learned about data annotation it is to use specialized tools. It is common best practice to use software tools to significantly speed up the annotation process by providing a clear interface, keyboard shortcuts and workflow support. Moreover, putting the model in the loop and using active learning techniques can make annotators even more efficient. Companies either build their own tools or use commerical ones, such as <a href="https://prodi.gy/">Prodigy</a> from the makers of spaCy.</p>
+</section>
+<section id="my-personal-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="my-personal-highlights">My personal highlights</h2>
+<p>In this last section I want to briefly summarize my three personal highlights from the conference.</p>
+<p>Joel Grus, Principal Engineer at Capital Group, gave an insightful and entertaining keynote titled “Proof-of-Concept delight”. Drawing on his own experience, Joel demonstrated how to build a PoC in about four hours using modern NLP tools. Here are the main steps he follows: 1. Identify the business problem: find out what task needs to be solved 2. Find the ML problem: formulate the task as a machine learning problem 3. Find a dataset: either you already have data or you need to find a suitable dataset 4. Scope down relentlessly: simplify the problem until it is the simplest useful version 5. Create a data model: Joel prefers a typed representation using NamedTuple over pandas for NLP datasets, since those often do not come in a tabular structure but rather have a one-to-many relationship, e.g.&nbsp;one line of text has multiple labels or named entities 6. Explore and clean your data: don’t spend ages here but do the necessary cleanup 7. Get labels: either from the dataset or create labels yourself using Prodigy or <a href="https://www.snorkel.ai/">Snorkel</a> 8. Choose a really simple model and adapt it just enough to work on your problem, e.g.&nbsp;spaCy’s off-the-shelf text classification model 9. Train the model and evaluate on a hold out set using the right metrics 10. Build a very simple demo web app with a text field and functionality to return predictions. <a href="https://www.streamlit.io/">Streamlit</a> makes is extremely easy 11. Take a risk and give the demo to customers. If they like it, build a production version. If not go back and improve the PoC.</p>
+<p>Christine Gerpheide, CTO at <a href="https://www.be-spoke.io/index.html">Bespoke</a>, presented two case studies about taking NLP from research to production. After giving a crash course on building chatbots, Christine walked us through the steps Bespoke takes before putting NLP models in production: 1. Identify opportunities for applying machine learning. It’s ok to use simple methods at this stage, e.g.&nbsp;pattern matching using regular expression 2. Do research, then build a prototype. Benchmark different approaches, e.g.&nbsp;baseline vs.&nbsp;custom development vs.&nbsp;cloud service 3. Have a go/no go meeting. Decide if there is potential and which approach to follow 4. Build a Minimum Viable Product and test it on a sub-set of users to get real feedback 5. Improve based on feedback, clean up the code and roll-out to all users</p>
+<p>The other use case presented was predictive typing. Christine also spent some time talking about the advantages of using in-house machine learning development rather than commercial services. Among them were the possibility to customize models, inspect how models are behaving and better control of model outputs.</p>
+<p>Moshe Wasserblat, NLP &amp; DL Research Manager at the <a href="https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html">Intel AI Lab</a>, gave a talk on the efficient use of deep learning in production. Given the size and computational cost of recent transformer-based language models (think of T5, Turing-NLG and especially GPT-3) it is important to also consider the practicality of implementing these models in production. There are several attempts to make transformer models smaller, such as quantization, pruning, early prediction, weight sharing or distillation. <a href="https://arxiv.org/abs/1910.01108">DistilBERT</a> from huggingface is 40% smaller and 60% faster than BERT, while maintaining 97% of its language understanding capabilities. Other even smaller yet powerful transformer models are <a href="https://arxiv.org/abs/2004.02984">MobileBERT</a>, <a href="https://arxiv.org/abs/1909.10351">TinyBERT</a> and <a href="https://arxiv.org/abs/1909.11942">aLBERT</a>, which are easier to fine-tune and deploy. For extreme compression and inference speed up, it is even possible to distil BERT into simpler models like LSTMs, CNNs or CBOW models. Personally I am very excited about the topic of making state-of-the-art NLP models more efficient for practical purposes. There is more to come at the <a href="https://sites.google.com/view/sustainlp2020/home">SustaiNLP</a> workshop at <a href="https://2020.emnlp.org/">EMNLP 2020</a>.</p>
+<p>Thanks for reading! Please let me know your feedback!</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
